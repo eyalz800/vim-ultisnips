@@ -1,0 +1,147 @@
+snippet main
+int main()
+{
+	${0}
+}
+endsnippet
+
+snippet mainp
+#include <iostream>
+
+int main()
+{
+	${0}
+}
+endsnippet
+
+snippet hg
+#ifndef ${1/([A-Za-z0-9_]+).*/$1/}
+#define ${1:guard}
+${2}
+#endif // ${1/([A-Za-z0-9_]+).*/$1/}
+endsnippet
+
+snippet extc
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+${2}
+#ifdef __cplusplus
+} // extern "C"
+#endif
+endsnippet
+
+snippet ns
+namespace ${1:name}
+{
+${2}
+} // $1
+endsnippet
+
+snippet doc
+/**
+ * ${0}
+ */
+endsnippet
+
+snippet docs
+/**
+ * ${0}
+ * @{
+ */
+endsnippet
+
+snippet doce
+/**
+ * @}
+ */
+endsnippet
+
+snippet inc
+#include <${0}>
+endsnippet
+
+snippet incl
+#include "${0}"
+endsnippet
+
+snippet imp
+import ${0};
+endsnippet
+
+snippet try
+try {
+	${2}
+} catch (${1}) {
+	${3}
+}
+endsnippet
+
+snippet if
+if (${1:condition}) {
+	${2}
+}
+endsnippet
+
+snippet ife
+if (${1:condition}) {
+	${2}
+} else {
+	${3}
+}
+endsnippet
+
+snippet ifc
+if constexpr (${1:condition}) {
+	${2}
+}
+endsnippet
+
+snippet ifce
+if constexpr (${1:condition}) {
+	${2}
+} else {
+	${3}
+}
+endsnippet
+
+snippet for
+for (auto ${1:it} = ${2:begin}; $1 < ${3:end}; ++$1) {
+	${4}
+}
+endsnippet
+
+snippet forr
+for (auto ${1:it} = ${2:end}; $1 > ${3:begin}; --$1) {
+	${4}
+}
+endsnippet
+
+snippet fori
+for (auto i = ${1:begin}; i < ${2:end}; ++i) {
+	${3}
+}
+endsnippet
+
+snippet forir
+for (auto i = ${1:end}; i > ${2:begin}; --i) {
+	${3}
+}
+endsnippet
+
+snippet scast
+static_cast<${1}>(${2})
+endsnippet
+
+snippet rcast
+reinterpret_cast<${1}>(${2})
+endsnippet
+
+snippet dcast
+dynamic_cast<${1}>(${2})
+endsnippet
+
+snippet ccast
+const_cast<${1}>(${2})
+endsnippet
