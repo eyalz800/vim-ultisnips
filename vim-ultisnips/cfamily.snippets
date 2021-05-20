@@ -162,3 +162,31 @@ endsnippet
 snippet ccast "const_cast<{}>({})"
 const_cast<${1}>(${2})
 endsnippet
+
+snippet class "class {};"
+class ${1:name}
+{
+	${VISUAL}$0
+};
+endsnippet
+
+snippet struct "struct {};"
+struct ${1:name}
+{
+	${VISUAL}$0
+};
+endsnippet
+
+snippet enum "enum {};"
+enum ${1:name}
+{
+	${VISUAL}$0
+};
+endsnippet
+
+snippet enumc "enum class {};"
+enum class ${1:name}
+{
+	${VISUAL}$0
+};
+endsnippet
