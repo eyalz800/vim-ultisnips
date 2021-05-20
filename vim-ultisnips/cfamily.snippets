@@ -1,11 +1,11 @@
-snippet main
+snippet main "int main() {}"
 int main()
 {
 	${VISUAL}$0
 }
 endsnippet
 
-snippet mainp
+snippet mainp "#include <iostream> int main() {}"
 #include <iostream>
 
 int main()
@@ -14,7 +14,7 @@ int main()
 }
 endsnippet
 
-snippet hg
+snippet hg "#ifndef...#define...#endif"
 #ifndef ${1:`!p
 if not snip.c:
 	import random, string
@@ -28,7 +28,7 @@ ${VISUAL}$0
 #endif // $1
 endsnippet
 
-snippet extc
+snippet extc "#ifdef __cplusplus...extern C"
 #ifdef __cplusplus
 extern "C"
 {
@@ -41,7 +41,7 @@ ${VISUAL}$0
 #endif
 endsnippet
 
-snippet ns
+snippet ns "namespace { ... }"
 namespace ${1:name}
 {
 
@@ -50,38 +50,38 @@ ${VISUAL}$0
 } // $1
 endsnippet
 
-snippet doc
+snippet doc "/** doc */"
 /**
  * ${0}
  */
 endsnippet
 
-snippet docs
+snippet docs "/** doc @{ */"
 /**
  * ${0}
  * @{
  */
 endsnippet
 
-snippet doce
+snippet doce "/** @} */"
 /**
  * @}
  */
 endsnippet
 
-snippet inc
+snippet inc "#include <...>"
 #include <${0}>
 endsnippet
 
-snippet incl
+snippet incl "#include ..."
 #include "${0}"
 endsnippet
 
-snippet imp
+snippet imp "import module;"
 import ${0:module};
 endsnippet
 
-snippet try
+snippet try "try { ... } catch (/* exception */) { ... }"
 try {
 	${VISUAL}$0
 } catch (${1:/* exception */}) {
@@ -89,13 +89,13 @@ try {
 }
 endsnippet
 
-snippet if
+snippet if "if (/*condition*/) { ... }"
 if (${1:condition}) {
 	${VISUAL}$0
 }
 endsnippet
 
-snippet ife
+snippet ife "if (/*condition*/) { ... } else { ... }"
 if (${1:condition}) {
 	${VISUAL}$0
 } else {
@@ -103,13 +103,13 @@ if (${1:condition}) {
 }
 endsnippet
 
-snippet ifc
+snippet ifc "if constexpr (/*condition*/) { ... }"
 if constexpr (${1:condition}) {
 	${VISUAL}$0
 }
 endsnippet
 
-snippet ifce
+snippet ifce "if constexpr (/*condition*/) { ... } else { ... }"
 if constexpr (${1:condition}) {
 	${VISUAL}$0
 } else {
@@ -117,42 +117,42 @@ if constexpr (${1:condition}) {
 }
 endsnippet
 
-snippet for
+snippet for "for (auto {} = {}; {} < {}; ++{}) { ... }"
 for (auto ${1:it} = ${2:begin}; $1 < ${3:end}; ++$1) {
 	${VISUAL}$0
 }
 endsnippet
 
-snippet forr
+snippet forr "for (auto {} = {}; {} > {}; --{}) { ... }"
 for (auto ${1:it} = ${2:end}; $1 > ${3:begin}; --$1) {
 	${VISUAL}$0
 }
 endsnippet
 
-snippet fori
+snippet fori "for (auto i = {}; i < {}; ++i) { ... }"
 for (auto i = ${1:begin}; i < ${2:end}; ++i) {
 	${VISUAL}$0
 }
 endsnippet
 
-snippet forir
+snippet forir "for (auto i = {}; i > {}; --i) { ... }"
 for (auto i = ${1:end}; i > ${2:begin}; --i) {
 	${VISUAL}$0
 }
 endsnippet
 
-snippet scast
+snippet scast "static_cast<{}>({})"
 static_cast<${1}>(${2})
 endsnippet
 
-snippet rcast
+snippet rcast "reinterpret_cast<{}>({})"
 reinterpret_cast<${1}>(${2})
 endsnippet
 
-snippet dcast
+snippet dcast "dynamic_cast<{}>({})"
 dynamic_cast<${1}>(${2})
 endsnippet
 
-snippet ccast
+snippet ccast "const_cast<{}>({})"
 const_cast<${1}>(${2})
 endsnippet
