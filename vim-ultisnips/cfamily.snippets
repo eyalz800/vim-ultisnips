@@ -28,7 +28,16 @@ ${VISUAL}$0
 #endif // $1
 endsnippet
 
-snippet extc "#ifdef __cplusplus...extern C"
+snippet extc "extern C { ... }"
+extern "C"
+{
+
+${VISUAL}$0
+
+}
+endsnippet
+
+snippet extcif "#ifdef __cplusplus...extern C"
 #ifdef __cplusplus
 extern "C"
 {
