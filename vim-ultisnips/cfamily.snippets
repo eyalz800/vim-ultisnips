@@ -1,0 +1,158 @@
+snippet main
+int main()
+{
+	${VISUAL}$0
+}
+endsnippet
+
+snippet mainp
+#include <iostream>
+
+int main()
+{
+	${VISUAL}$0
+}
+endsnippet
+
+snippet hg
+#ifndef ${1:`!p
+if not snip.c:
+	import random, string
+	snip.rv = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
+else:
+	snip.rv = snip.c`}
+#define $1
+
+${VISUAL}$0
+
+#endif // $1
+endsnippet
+
+snippet extc
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+${VISUAL}$0
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
+endsnippet
+
+snippet ns
+namespace ${1:name}
+{
+
+${VISUAL}$0
+
+} // $1
+endsnippet
+
+snippet doc
+/**
+ * ${0}
+ */
+endsnippet
+
+snippet docs
+/**
+ * ${0}
+ * @{
+ */
+endsnippet
+
+snippet doce
+/**
+ * @}
+ */
+endsnippet
+
+snippet inc
+#include <${0}>
+endsnippet
+
+snippet incl
+#include "${0}"
+endsnippet
+
+snippet imp
+import ${0:module};
+endsnippet
+
+snippet try
+try {
+	${VISUAL}$0
+} catch (${1:/* exception */}) {
+	${2:/* catch */}
+}
+endsnippet
+
+snippet if
+if (${1:condition}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet ife
+if (${1:condition}) {
+	${VISUAL}$0
+} else {
+	${2:/* else */}
+}
+endsnippet
+
+snippet ifc
+if constexpr (${1:condition}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet ifce
+if constexpr (${1:condition}) {
+	${VISUAL}$0
+} else {
+	${2:/* else */}
+}
+endsnippet
+
+snippet for
+for (auto ${1:it} = ${2:begin}; $1 < ${3:end}; ++$1) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet forr
+for (auto ${1:it} = ${2:end}; $1 > ${3:begin}; --$1) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet fori
+for (auto i = ${1:begin}; i < ${2:end}; ++i) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet forir
+for (auto i = ${1:end}; i > ${2:begin}; --i) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet scast
+static_cast<${1}>(${2})
+endsnippet
+
+snippet rcast
+reinterpret_cast<${1}>(${2})
+endsnippet
+
+snippet dcast
+dynamic_cast<${1}>(${2})
+endsnippet
+
+snippet ccast
+const_cast<${1}>(${2})
+endsnippet
